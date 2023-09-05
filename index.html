@@ -18,14 +18,16 @@
     </script>
     <main>
         <h1>Iffy</h1>
+        <img id="image" src="#">
         <script>
             let image = "";
             if(console.log('window.location.includes(stuff)', window.location.host.includes('github.io')) == true){
-                image = "https://fastly.picsum.photos/id/200/200/300.jpg?hmac=XVCLpc2Ddr652IrKMt3L7jISDD4au5O9ZIr3fwBtxo8"
+                document.getElementById("img").src = "https://fastly.picsum.photos/id/200/200/300.jpg?hmac=XVCLpc2Ddr652IrKMt3L7jISDD4au5O9ZIr3fwBtxo8"
+                alt = "image displayed because ON github pages";
             }else{
-                image = "https://fastly.picsum.photos/id/343/200/300.jpg?hmac=_7ttvLezG-XONDvp0ILwQCv50ivQa_oewm7m6xV2uZA"
+                document.getElementById("img").src = "https://fastly.picsum.photos/id/343/200/300.jpg?hmac=_7ttvLezG-XONDvp0ILwQCv50ivQa_oewm7m6xV2uZA"
+                alt="image displayed because not github pages";
         }
-        return image;
         </script>
         <img src="https://fastly.picsum.photos/id/343/200/300.jpg?hmac=_7ttvLezG-XONDvp0ILwQCv50ivQa_oewm7m6xV2uZA"
             alt="image displayed because not github pages">
