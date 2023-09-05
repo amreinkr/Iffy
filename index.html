@@ -10,24 +10,23 @@
 </head>
 
 <body>
-    <img id="image" src="https://fastly.picsum.photos/id/200/200/300.jpg?hmac=XVCLpc2Ddr652IrKMt3L7jISDD4au5O9ZIr3fwBtxo8"/>
-    <img id="baseImage" src="https://fastly.picsum.photos/id/343/200/300.jpg?hmac=_7ttvLezG-XONDvp0ILwQCv50ivQa_oewm7m6xV2uZA"/>
+    
     <script>
         console.log('window.location.host', window.location.host)
-        if(console.log('window.location.includes(stuff)', window.location.host.includes('github.io'))){
-            let image = document.getElementById("image");
-            image.src="https://fastly.picsum.photos/id/200/200/300.jpg?hmac=XVCLpc2Ddr652IrKMt3L7jISDD4au5O9ZIr3fwBtxo8"
-            alt="image displayed because ON github pages";
-            document.getElementById("image").style.display = "none";
-        }else{
-            let baseImage = document.getElementById("baseImage");
-            baseImage.src="https://fastly.picsum.photos/id/343/200/300.jpg?hmac=_7ttvLezG-XONDvp0ILwQCv50ivQa_oewm7m6xV2uZA"
-            alt="image displayed because not github pages";
-            document.getElementById("baseImage").style.display = "none";
-        }
+        console.log('window.location.includes(stuff)', window.location.host.includes('github.io'))
+            
     </script>
     <main>
         <h1>Iffy</h1>
+        <script>
+            let image = "";
+            if(console.log('window.location.includes(stuff)', window.location.host.includes('github.io')) == true){
+                image = "https://fastly.picsum.photos/id/200/200/300.jpg?hmac=XVCLpc2Ddr652IrKMt3L7jISDD4au5O9ZIr3fwBtxo8"
+            }else{
+                image = "https://fastly.picsum.photos/id/343/200/300.jpg?hmac=_7ttvLezG-XONDvp0ILwQCv50ivQa_oewm7m6xV2uZA"
+        }
+        return image;
+        </script>
         <img src="https://fastly.picsum.photos/id/343/200/300.jpg?hmac=_7ttvLezG-XONDvp0ILwQCv50ivQa_oewm7m6xV2uZA"
             alt="image displayed because not github pages">
     </main>
